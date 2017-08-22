@@ -1,0 +1,626 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+height: 100%;
+  margin: 0;
+
+
+}
+
+ul.nav li a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul.nav li a:hover {
+    color: #33FE99;
+    text-decoration: none;
+}
+
+.green-book a{
+  color:#33FE99;
+}
+
+.green-book a:visited{
+  color:#33FE99;
+}
+
+a{
+
+    color: #28e285;
+    text-decoration: none;
+}
+
+a:hover{
+  color: #28e285;
+}
+
+a:visited{
+  color: #28e285;
+}
+
+.home {
+  height: 100%;
+}
+
+.front-page {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  font-size: 40px;
+}
+
+
+/* Draw a horizontal line at the bottom and it will say Scroll at the top of that line*/
+
+#bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #33FE99;
+}
+
+#bar p {
+  left: 10px;
+  position: relative;
+}
+
+span {
+  color: #33FE99;
+}
+
+
+/**** ABOUT SECTION ****/
+.fixed {
+  position: fixed;
+  top: 0;
+
+}
+.about {
+  height: 100%;
+}
+
+.header {
+  font-size: 36px;
+  margin-top: 1%;
+  display: inline-block;
+}
+
+.hamburger {
+  width: 40px;
+  height: 20px;
+  float: right;
+  display: none;
+  margin-top: 1%;
+  z-index: 600;
+}
+.btnMenu{
+  width: 30px;
+  height: 30px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  position: absolute;
+  cursor: pointer;
+  border-bottom: 0;
+  top: 50px;
+  right: 50px;
+  z-index: 9999;
+  border-bottom: 0;
+}
+
+.btnMenu:hover {
+  border-bottom: 0;
+}
+
+.btnMenu span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 40px;
+  background: #33FE99;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.btnMenu span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.btnMenu span:nth-child(2) {
+  top: 10px;
+  transform-origin: left center;
+}
+
+.btnMenun span:nth-child(3) {
+  top: 20px;
+  transform-origin: left center;
+}
+
+.btnMenun.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+.btnMenun.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.btnMenun.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 19px;
+  left: 8px;
+}
+.screen.open {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    position: fixed;
+    right: 0%;
+    top: 0;
+    z-index: 500;
+    background-color: white;
+    display: none;
+}
+.meat, .meat::after, .meat::before {
+  width: 40px;
+  height: 1px;
+}
+
+.meat {
+  top: 0;
+  position: fixed;
+  transform: translateY(25px);
+  background: #33FE99;
+      z-index: 700;
+  transition: all 0ms 300ms;
+}
+
+.meat.animate {
+  background: rgba(255, 255, 255, 0);
+}
+
+.meat::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  background: #33FE99;
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.meat::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #33FE99;
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav {
+  float: right;
+  margin-top: 1%;
+  top: 5px;
+  right: 20px;
+  font-size: 26px;
+  background: #fff;
+z-index: 100;
+
+}
+
+.about_page {
+  margin: auto;
+}
+
+.outer-book {
+  border: 1px solid #33fe99;
+  width: 94%;
+  position: relative;
+  margin-top: 25%;
+}
+
+.green-book {
+  border: 1px solid #000;
+  background: #fff;
+  width: 94%;
+  position: relative;
+  left: 70px;
+  top: 15px;
+  text-align: justify;
+  /*text-align:center;*/
+  z-index: 10;
+}
+
+.green-book p {
+  width: 94%;
+  position: relative;
+  font-size: 16px;
+  left: 3%;
+  top: 6%;
+}
+
+.footer-text {
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+
+/**** PORTFOLIO SECTION ****/
+
+.works {
+  height: auto;
+  padding-bottom: 62px;
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/tiny_grid.png);
+}
+
+.projects {
+  margin-top: 5%;
+}
+
+.color-box {
+  height: 400px;
+  width: 400px;
+  background: #33fe99;
+  position: relative;
+  margin-top: 8%;
+  display: inline-block;
+  margin: auto;
+}
+
+ .music_player.info-box  {
+  font-family: 'Raleway', sans-serif;
+  border: 1px solid #000;
+  background: #fff;
+  width: 370px;
+  height: 100%;
+  position: relative;
+  left: 50px;
+  top: 8%;
+  text-align: justify;
+  z-index: 10;
+  background-image: url(http://res.cloudinary.com/pandaapple27/image/upload/v1503299783/music_player_xaz4a1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right-text {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  /*bottom: 200px;*/
+}
+
+.right-text h2::before{
+  content: '';
+      border: 1px solid #33fe99;
+      /* position: absolute; */
+      height: 8px;
+      top: 50%;
+      background-color: #33fe99;
+      width: 10px;
+      left: 0;
+      opacity: .75;
+opacity: .75;
+z-index: -99;
+
+}
+
+ .weather_app.info-box {
+  background-image: url(http://res.cloudinary.com/pandaapple27/image/upload/v1503324402/weather_app_ivufmr.png);
+  border: 1px solid #000;
+  width: 370px;
+  height: 100%;
+  position: relative;
+  left: 50px;
+  top: 8%;
+  text-align: justify;
+  z-index: 10;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.foursquare.info-box {
+ background-image: url(https://res.cloudinary.com/pandaapple27/image/upload/v1503327395/Foursquare_api_vtpk9v.png);
+ border: 1px solid #000;
+ width: 370px;
+ height: 100%;
+ position: relative;
+ left: 50px;
+ top: 8%;
+ text-align: justify;
+ z-index: 10;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.youtube.info-box {
+ background-image: url(https://res.cloudinary.com/pandaapple27/image/upload/v1503330649/youtube_search_gqnkpa.png);
+ border: 1px solid #000;
+ width: 370px;
+ height: 100%;
+ position: relative;
+ left: 50px;
+ top: 8%;
+ text-align: justify;
+ z-index: 10;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.keep.info-box {
+ background-image: url(https://res.cloudinary.com/pandaapple27/image/upload/v1503340906/keep_real_estate_m1buld.png);
+ border: 1px solid #000;
+ width: 370px;
+ height: 100%;
+ position: relative;
+ left: 50px;
+ top: 8%;
+ text-align: justify;
+ z-index: 10;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: left;
+}
+
+/**** CONTACT SECTION ****/
+.contact{
+      height: 40%;
+
+}
+#contact-blurb {
+    position: relative;
+    bottom: 15px;
+}
+.contact ul{
+  list-style: none;
+  position: relative;
+      top: 10px;
+left: 25%;
+list-style: none;
+}
+#contact-blurb, #email, #number, #twitter, #linkedin{
+  text-align: center;
+      padding-bottom: 10px;
+  font-size: 26px;
+}
+
+#email a, #number a, #twitter a, #linkedin a{
+  text-decoration: none;
+  color:#000;
+}
+
+#email a:hover, #number a:hover, #twitter a:hover, #linkedin a:hover{
+  text-decoration: none;
+  color:#33fe99;
+}
+
+/**** Media Queries ****/
+
+@media (min-width:576px) {}
+
+
+/**** For mobile phones ****/
+
+@media (max-width: 768px) {
+  .front-page {
+    position: absolute;
+    top: 15%;
+    right: 0;
+  }
+  .nav {
+        position: fixed;
+            font-size: 17px;
+  }
+  .hamburger {
+    display: initial;
+  }
+  .footer-text {
+    display: none;
+  }
+
+  .outer-book {
+    border: 1px solid #33fe99;
+    width: 94%;
+    position: relative;
+    margin-top: 6%;
+}
+
+  .color-box {
+    height: 400px;
+    width: 100%;
+    background: #33fe99;
+    position: relative;
+    margin-top: 8%;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .music_player.info-box  {
+   border: 1px solid #000;
+   background: #fff;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   top: 8%;
+   left: 0;
+   text-align: justify;
+   z-index: 10;
+   background-image: url(http://res.cloudinary.com/pandaapple27/image/upload/v1503299783/music_player_xaz4a1.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+
+ .music_player.right-text {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    top: 10%;
+    margin-top: 20%;
+    /* bottom: 200px; */
+}
+
+.weather_app.info-box {
+ background-image: url(http://res.cloudinary.com/pandaapple27/image/upload/v1503324402/weather_app_ivufmr.png);
+ border: 1px solid #000;
+ width: 100%;
+ height: 100%;
+ position: relative;
+ left: 0;
+ top: 8%;
+ text-align: justify;
+ z-index: 10;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.weather_app.right-text {
+   display: inline-block;
+   position: relative;
+   margin: auto;
+   top: 10%;
+   margin-top: 20%;
+   /* bottom: 200px; */
+}
+
+.foursquare.info-box {
+ background-image: url(https://res.cloudinary.com/pandaapple27/image/upload/v1503327395/Foursquare_api_vtpk9v.png);
+ border: 1px solid #000;
+ width: 100%;
+ height: 100%;
+ position: relative;
+ left: 0;
+ top: 8%;
+ text-align: justify;
+ z-index: 10;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.foursquare.right-text {
+   display: inline-block;
+   position: relative;
+   margin: auto;
+
+       margin-top: 39%;
+   /* bottom: 200px; */
+}
+
+.foursquare.color-box {
+  height: 400px;
+  width: 100%;
+  background: #33fe99;
+  position: relative;
+      top: 62px;
+  display: inline-block;
+  margin: auto;
+}
+.youtube.info-box {
+ background-image: url(https://res.cloudinary.com/pandaapple27/image/upload/v1503330649/youtube_search_gqnkpa.png);
+ border: 1px solid #000;
+ width: 100%;
+ height: 100%;
+ position: relative;
+ left: 0;
+ top: 8%;
+ text-align: justify;
+ z-index: 10;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.youtube.right-text {
+   display: inline-block;
+   position: relative;
+   margin: auto;
+   top: 10%;
+   margin-top: 20%;
+   /* bottom: 200px; */
+}
+
+.keep.info-box {
+ background-image: url(https://res.cloudinary.com/pandaapple27/image/upload/v1503340906/keep_real_estate_m1buld.png);
+ border: 1px solid #000;
+ width: 100%;
+ height: 100%;
+ position: relative;
+ left: 0;
+ top: 8%;
+ text-align: justify;
+ z-index: 10;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: left;
+}
+
+.keep.right-text {
+   display: inline-block;
+   position: relative;
+   margin: auto;
+   top: 10%;
+   margin-top: 39%;
+   /* bottom: 200px; */
+}
+
+.keep.color-box {
+  height: 400px;
+  width: 100%;
+  background: #33fe99;
+  position: relative;
+      top: 62px;
+  display: inline-block;
+  margin: auto;
+}
+
+.screen .nav {
+    display: none;
+    z-index: 600;
+    position: relative;
+    right: 25%;
+    top: 30%;
+}
+
+
+
+}
+
+@media(max-width: 576px) {
+  .green-book {
+    left: 31px;
+  }
+
+  #contact-blurb {
+      position: relative;
+    bottom: 0;
+        top: 10px;
+  }
+
+  .contact ul{
+
+    position: relative;
+  top: 15px;
+  margin-bottom: 0px;
+  left: 0;
+
+  }
+}
